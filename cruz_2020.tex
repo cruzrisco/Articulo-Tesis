@@ -1,0 +1,86 @@
+% ------------------------------------------------------
+% File    : cruz_computing_2020.tex
+% Content : Article for Computing
+% Date    : 30/03/2020
+% Version : 2.0
+% Authors : M. Cruz, A. Durán
+% ------------------------------------------------------
+
+% ------------------------------------------------------
+% Last update: 30/03/2020 (Amador)
+% Limpieza de restos previos.
+% ------------------------------------------------------
+  
+\documentclass[smallextended]{svjour3}	% onecolumn (second format)
+\usepackage[utf8]{inputenc}	% UTF-8 character set 
+\usepackage[english]{babel}	% this paper is written in English
+\usepackage{cruz_other} % other packages and definitions
+
+% Insert the name of "your journal" with
+\journalname{Computing}
+
+% The correct dates will be entered by the editor
+\date{Received: date / Accepted: date}
+
+\begin{document}
+
+\title{\TITLE\thanks{\FUNDING}}
+ %\subtitle{Do you have a subtitle?\\ If so, write it here}
+\titlerunning{\SHORT}       
+
+\author{%
+  Margarita Cruz      \and
+  Beatriz Bern\'ardez \and
+  Amador Dur\'an      \and
+  Cathy Guevara     \and
+  Antonio Ruiz{\--}Cort\'es
+}
+
+\authorrunning{M. Cruz et al.} % if too long for running head
+
+\institute{%
+Margarita Cruz \at \email{cruz@us.es} 		 				\\ \\
+Beatriz Bern\'ardez \at \email{beat@us.es} 				\\ \\
+Amador Dur\'an \at \email{amador@us.es}		 				\\ \\
+Cathy Guevara \at 
+\email{cguevara@utn.edu.ec}
+%Universidad Técnica del Norte: Ibarra, Imbabura, EC
+% carrera de Ingeniería en Sistemas Computacionales (Facultad de Ingeniería en Ciencias Aplicadas)
+\\ \\
+Antonio Ruiz{\--}Cort\'es \at \email{aruiz@us.es} \\
+\at
+Department of Computer Languages and Systems, Universidad de Sevilla, Seville, Spain
+}
+
+\maketitle
+
+\input{acronyms}
+
+% -------
+% Content
+% -------
+
+\input{sections/cruz_2020_00_abstract}
+\input{sections/cruz_2020_01_introduction}
+\input{sections/cruz_2020_02_background}
+
+\input{sections/cruz_2020_03_metamodel}
+\input{sections/cruz_2020_04_template}
+\input{sections/cruz_2020_05_caseStudy}
+
+%\input{sections/cruz_2020_09_results}
+\input{sections/cruz_2020_10_trabajos}
+\input{sections/cruz_2020_11_conclusion}
+
+%-----------------------
+\begin{acknowledgements}
+\rojo{To Carmen Florido (ETSIA) and Aránzazu García and Rocío Abia (Instituto de la Grasa, CSIC), for validating the template by specifying their experiments and for their kind willingness to provide us with all the information required.}
+\end{acknowledgements}
+%----------------------
+
+%---------------------------------
+\bibliographystyle{plain}
+\bibliography{cruz_2020}   % name your BibTeX data base
+%---------------------------------
+
+\end{document}

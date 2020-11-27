@@ -1,0 +1,140 @@
+% ------------------------------------------------------
+% File    : cruz_computing.sty
+% Content : Definitions for the Computing article
+% Date    : 30/03/2020
+% Version : 2.0
+% Authors : A. Durán
+% ------------------------------------------------------
+
+% ------------------------------------------------------
+% Last update: 30/03/2020 (A. Durán)
+% - Second version.
+% ------------------------------------------------------
+
+% -----------------
+% Required packages
+% -----------------
+
+\RequirePackage[pdftex]{graphicx} % for including graphics
+\graphicspath{{./figures/}}				% path for graphic files
+%\RequirePackage{epstopdf}  			% for including EPS figures
+\RequirePackage{makecell}					% table utilities
+\RequirePackage{xspace}		 				% automatic space after macros
+\RequirePackage{xcolor}						% extended color names
+\RequirePackage{hyperref}         % hyperlinks in LaTeX
+\RequirePackage{tabularx}  				% better tables
+%\RequirePackage{colortbl} 				% color for table rows
+%\RequirePackage{url}							% URLs in LaTeX (hyperref is better)
+\RequirePackage{pifont} 					% symbol fonts
+%\RequirePackage{courier}   			% Courier font
+\RequirePackage{mathptmx}  			% Times New Roman for text and math
+%\RequirePackage{times}     				%	Times New Roman font
+%\RequirePackage{marvosym}        % for the \Letter symbol
+%\RequirePackage[bottom]{footmisc} % Footnotes under figures at bottom
+%\RequirePackage{fix-cm}
+%\RequirePackage{dblfloatfix}
+%\RequirePackage{booktabs}
+%\RequirePackage{threeparttable}
+
+\RequirePackage{fix-cm}
+\RequirePackage{booktabs} % For formal tables
+%\usepackage{pifont}% Para CheckMark \ding{51} \ding{55} 
+%\usepackage[none]{hyphenat} % Evita cortar palabras
+%\usepackage{multicol}
+\RequirePackage[acronym]{glossaries}
+\RequirePackage{multirow}
+%\usepackage{enumerate}
+%\usepackage{amsmath}
+%\usepackage{color}
+%\usepackage{caption} % other packages and definitions
+%\newcommand{\rojo}[1]{\textcolor{red}{#1}}
+%\usepackage{latexsym}
+
+% --------
+% Acronyms
+% --------
+
+\newcommand{\SE}{SE\xspace}
+\newcommand{\ESE}{ESE\xspace}
+\newcommand{\SMS}{SMS\xspace}
+\newcommand{\SLR}{SLR\xspace}
+\newcommand{\KA}{KA\xspace}
+\newcommand{\BPMN}{BPMN\xspace}
+\newcommand{\SWEBOK}{SWEBOK\xspace}
+\newcommand{\IC}[1]{IC$_{#1}$\xspace}
+\newcommand{\EC}[1]{EC$_{#1}$\xspace}
+\newcommand{\RQ}[1]{RQ$_{#1}$\xspace}
+
+%\newcommand{\SWEBOKKA}[1]{\textsf{\small#1}}
+%\newcommand{\SWEBOKKA}[1]{\textsf{\footnotesize#1}}
+\newcommand{\SWEBOKKA}[1]{#1}
+\newcommand{\REQS}{\SWEBOKKA{REQS}\xspace}
+\newcommand{\DESG}{\SWEBOKKA{DESG}\xspace}
+\newcommand{\CONS}{\SWEBOKKA{CONS}\xspace}
+\newcommand{\TEST}{\SWEBOKKA{TEST}\xspace}
+\newcommand{\MAIN}{\SWEBOKKA{MAIN}\xspace}
+\newcommand{\CONF}{\SWEBOKKA{CONF}\xspace}
+\newcommand{\MNGT}{\SWEBOKKA{MNGT}\xspace}
+\newcommand{\PROC}{\SWEBOKKA{PROC}\xspace}
+\newcommand{\METH}{\SWEBOKKA{METH}\xspace}
+\newcommand{\QUAL}{\SWEBOKKA{QUAL}\xspace}
+%\newcommand{\SKIL}{\SWEBOKKA{SKIL}\xspace}
+\newcommand{\SKIL}{\SWEBOKKA{PROF}\xspace}
+
+\newcommand{\ECON}{\SWEBOKKA{ECON}\xspace}
+
+\newcommand{\EX}{\SWEBOKKA{EX}\xspace}
+\newcommand{\QE}{\SWEBOKKA{QE}\xspace}
+\newcommand{\CS}{\SWEBOKKA{CS}\xspace}
+\newcommand{\SV}{\SWEBOKKA{SV}\xspace}
+
+\newcommand{\SCOPUS}{SCOPUS\xspace}
+\newcommand{\WoS}{WoS\xspace}
+\newcommand{\VOSviewer}{VOSviewer\xspace}
+
+% --------
+% Commands
+% --------
+
+\newcommand{\tnote}[1]{#1} % <-- temporal
+
+\newcommand{\rojo}[1]{\textcolor{red}{#1}}
+\newcommand{\prescindible}[1]{\textcolor{teal}{#1}}
+
+%\newcommand{\query}[1]{\texttt{\small{#1}}}
+\newcommand{\query}[1]{\texttt{\scriptsize{#1}}}
+
+\newcommand{\slantfrac}[2]{\,^#1\!/_#2}
+
+%\newcommand{\email}[1]{#1}
+
+\newcommand{\etal}{\emph{et al}.\xspace}
+
+\newcommand{\TITLE}{%
+%How to specify changes in Software Engineering replications: Proposal and empirical validation
+Change Specification in Replications of Software Engineering Empirical Studies: Proposal and Validation
+}
+\newcommand{\SHORT}{Change Specification in Replications of SE Empirical Studies}
+
+%\newcommand{\SHORT}{How to specify changes in SE replications}
+
+\newcommand{\FUNDING}{%
+This work is partially supported by the European Commission (FEDER) and the Spanish Government under projects BELI (TIN2015--70560--R), APOLO (US--1264651), OPHELIA (RTI2018--101204--B--C22), HORATIO (RTI2018-101204--B--C21) and EKIPMENT-PLUS (P18--FR--2895).
+}
+
+%\newcommand{\labpackurl}{{\scriptsize\url{https://isa-group.github.io/SE-Replication-Studies/}}}
+
+% -----------
+% Definitions
+% -----------
+
+% Para que las filas de las tablas no salgan tan juntas
+\setlength\extrarowheight{1.5pt}
+
+% Tipo de columna centrada para usar con tabularx
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\definecolor{lightgreen}{rgb}{0.80,0.90,0.80}	% para las celdas de las tablas
+\definecolor{darkgreen}{rgb}{0.00,0.33,0.00}	% para las notas al margen
+\definecolor{grey}{rgb}{0.64, 0.87, 0.93}
+

@@ -1,0 +1,97 @@
+@startuml
+
+hide circle
+hide methods
+skinparam linetype ortho
+'skinparam linetype polyline
+'skinparam fixCircleLabelOverlapping true
+
+enum Purpose <<enumeration>> {
+  confirm_results
+  generalize_results
+  overcome_limitations
+}
+
+enum Validity <<enumeration>> {
+  construct
+  internal
+  external
+  conclusion
+}
+
+enum ProtocolElement <<enumeration>> {
+  guides
+  experimental_design
+  experimental_material
+  measuring_instruments
+}
+
+enum StakeholderRole <<enumeration>> {
+  designer
+  analyst
+  trainer
+  monitor
+  measurer
+}
+
+class EmpiricalStudy {
+  acronym : ID
+  site : String
+  date : Date
+  description : Text
+  comments : Text
+}
+
+class Replication {
+  type : { external, internal }
+  purpose : Purpose [1..*]
+  comments : Text
+}
+
+class Change {
+  baseline_situation : Text
+  replication_situation : Text
+  because_of : Text
+  comments : Text
+}
+
+class ThreatEffect {
+  validity : Validity
+  effect : { increase, decrease }
+  rationale : Text 
+}
+
+class OperationalizationChange {
+  affected_variable : String
+  variable_type : { dependent, independent, context }
+}
+
+class PopulationChange {
+  experimental_unit : ?
+  property : ?
+}
+
+class ProtocolChange {
+  protocol_element : ProtocolElement   
+}
+
+class StakeholderChange {
+  stakeholder_role : StakeholderRole
+}
+
+EmpiricalStudy "baseline" *-down- "  *   " Replication : "isReplicatedIn"
+EmpiricalStudy "{incomplete}" <|-down- Replication  
+
+Replication *-- "  *  " Change
+Change *-right- "  *  " ThreatEffect
+
+together {
+  Change <|-down- OperationalizationChange
+  Change <|-down- PopulationChange
+  Change <|-down- ProtocolChange
+  Change <|-down- StakeholderChange
+}
+note "Una replicación podría hacerse\n por más de un propósito" as N1
+
+N1 .left. Replication
+@enduml

@@ -1,0 +1,44 @@
+% ------------------------------------------------------
+% File    : cruz_computing_2020_01_introduction.tex
+% Content : Introduction (y DSR) section of the article for Computing
+% Date    : 1/12/2018
+% Authors : M.Cruz
+% ------------------------------------------------------
+
+% ------------------------------------------------------
+% Last update: 26/10/2020 (Marga)
+% - Cambios a partir de la tesis.
+% ------------------------------------------------------
+
+\section{Introduction}
+\label{sec:intro}
+
+\gls{ESE} allows the evaluation of new methods, techniques and tools to know the convenience of using them during the development process  \cite{sjoberg2005survey}.
+Once an artefact has been evaluated for the first time, the study needs to be replicated in different contexts and conditions, not only to consolidate the acquired knowledge, but also to know if its results can be generalized \cite{Baldassarre}.
+First, it is advisable to carry out internal replications, then external ones which are those carried out by other experimenters and are the ones with the greatest power of confirmation. Without external replications the results are only provisional \cite{brooks1996replication}.
+
+However, despite the importance of replications, and although the practice of replications has increased in recent years  \cite{da2014replication}, the number of replications in \gls{SE} remains low  \cite{solari2017content}.
+Among the causes influencing this situation are, on the one hand, the lack of agreement on common criteria for reporting replications \cite{carver2010towards}.
+On the other hand, \emph{tacit knowledge} not explicit in the replication report \cite{shull2002replicating}. In addition, there is a lack or incompleteness of the \emph{laboratory packages} that are necessary to facilitate replications \cite{solari2017content}. All this, together with  the effort and resources needed to carry out an experiment \cite{da2014replication}.
+
+When considering a new replication, the need to incorporate changes to the original experiment arises for several reasons: \emph{i)} \emph{to avoid propagating problems} from the original experiment \cite{kitchenham2008role}; \emph{ii)} \emph{to adapt the replication} to different conditions where the original experiment was carried out \cite{Baldassarre}; and \emph{iii)} \emph{to generalize the results} of the original experiment  \cite{shull2008role}. 
+
+The importance of properly specifying changes in replications is twofold: on the one hand, for the author of the first replication himself; he must deepen in the nature of the proposed changes and analyze their repercussion, determining their convenience in the design of the experiment and their effect on a possible meta-analysis.
+It will be necessary to analyze its influence on the validity of the experiment and to document the reason for this change.
+On the other hand, for successive replications, before proposing new changes, it will be very helpful to know the changes already made in order to know how an original experiment has evolved within a family of experiments and why the changes have been made. This facilitates the design of experiments, without repeating failures already identified and adapting the experiment to the new environment with more success. 
+
+Within the documentation to be published on the replications, Carver's \emph{guidelines} \cite{carver2010towards} highlight the need to describe these changes with respect to the original experiment and the situation that caused the change. In \cite{gomez2014understanding}, changes are classified according to the element of the experimental configuration affected by the change and related to the purpose of replication.
+Several guidelines for the reporting of controlled experiments have been proposed in \gls{SE} \cite{jedlitschka2008reporting,juristo2013basics,wohlin:experimentation}. 
+However, to the best of our knowledge, there is only the initial proposed Carver guidelines \cite{carver2010towards} for the publication of replications of experiments.
+ 
+
+This paper proposes an approach for specifying changes that tries not only to report the changes but to design and deepen in the proposed changes. It is based on: \emph{i}) a meta--model to formalize information requirements; and \emph{ii)} a template that facilitates reusability, visual representation and avoids redundancies \cite{duran1999requirements,del2016using}. 
+
+To validate the proposal, the template has been empirically evaluated through a multiple--case study using the CÆSAR tool developed to facilitate the definition of changes.
+We think that the systematic specification of changes will support the process of replication of controlled experiments
+
+\input{figures/T-DSR.tex}
+
+\gls{DSR} has been adopted as a research methodology. \gls{DSR} creates and evaluates \emph{artefacts} in order to solve \emph{identified organizational problems} \cite{von2004design}. The phases followed in our research are those defined in the DSR methodology proposed in \cite{peffers2007design}. \tablename~\ref{tab:fases-DSR} shows these phases and their correspondence with the sections of this work.
+
+ The remainder of this paper is organized as follows:  Section  \ref{sec:metamodelo} presents the meta--model on which the template is based;  Section \ref{sec:plantilla} proposes the template for the specification of replication changes; Section \ref{sec:Case} presents our multiple--case study; Sections \ref{sec:SoftEng-Case}, \ref{sec:Science-Case} and \ref{sec:Automatic-Case}  present each of the case study individually; Section \ref{sec:trabajos} analyses the related work; and Section \ref{sec:conclusions} presents the concluding remarks and future work.

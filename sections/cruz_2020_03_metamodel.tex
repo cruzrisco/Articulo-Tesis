@@ -1,0 +1,71 @@
+% ------------------------------------
+% File    : cruz_computing_2020_03_metamodel.tex
+% Content : Meta--model section of the article for Computing
+% Date    : 1/12/2018
+% Authors : M.Cruz
+% ------------------------------------
+% ------------------------------
+% Last update: 1/11/2020 (MCruz)
+% Actualización a partir de la tesis
+% ------------------------------
+ 
+%-----------------------------------
+\section{Meta--model about replications and changes}
+\label{sec:metamodelo} 
+%-----------------------------------
+
+The information involved in the replication is detailed below and will serve as the basis for the definition of the meta--model.
+
+First, to identify both the replication and the baseline experiment a code or \emph{acronym} relative to the baseline experiment is used. The baseline experiment can be either an original experiment or a previous replication.
+
+Next, it is necessary to provide a general idea of the experiment. It seems reasonable to record the \emph{Goal--Question--Metric (GQM)} \cite{Basili1994} or, failing that, the \emph{goal}. 
+A brief \emph{description} of the experiment will also be recorded, along with its \textit{site} and \textit{date} of performance.
+
+Regarding replication, in addition to data concerning the context (\textit{site} and \textit{date} of replication), it is relevant to identify the \textit{type} and \textit{purpose} of replication.
+
+Depending on who carries out the replication, these are classified as \textit{internal}, carried out by the original experimenters, and \textit{external}, carried out by independent experimenters.
+
+The replication \textit{purpose} can be: \emph{i) Confirm results} \emph{ii) Generalise results} and \emph{iii) Overcome some limitations of the baseline experiment}.
+
+Next, we focus on identifying information related to the specification of the \textit{changes} that characterise the replication.
+That is, for each change, the \emph{situation in the baseline experiment and in the replication} along with the \emph{cause of change} are described.
+
+Next, depending on the \emph{element of the experimental configuration} modified, changes can be classified into \emph{dimensions}: 
+%Gómez \etal \cite{gomez2014understanding} define the following \emph{dimensions}:
+
+\begin{itemize}
+    \item \textit{Operationalization}. Includes changes related to the elements: \emph{i) cause} (e.g. changes in the application of treatment), \emph{ii) effect} (e.g. changes in metrics) and \emph{iii) measurement procedure}.
+    
+    \item \textit{Population}. The element affected by the change is some property of the subjects or experimental units (e.g. experimental subjects with different experience level or age from the baseline experiment). The modified \emph{property} will be identified.
+    
+    \item \textit{Protocol}. Includes changes related to the elements: \emph{i) experimental design}, \emph{ii) experimental material} (e.g. changes to the code of the program to be inspected), \emph{iii) guides} (e.g. changes to the instructions provided), \emph{iv) measuring instruments} (e.g. changes to the questionnaire for data collection)  and \emph{v) data analysis techniques}. The experimental protocol is the set up of these elements to observe the effects of treatments \cite{Juristo2012}.
+
+    \item \textit{Stakeholder}. Related to changes in the roles of experimenters. The elements are: \emph{i) designer}, \emph{ii) analyst}, \emph{iii) trainer}, \emph{iv) monitor} and \emph{v) measurer}.
+    
+    \item \textit{Context}. The element affected by the change, is a \emph{context variable} that will be necessary to identif. %y (e.g. perform the baseline experiment at the beginning of the course and the replication at exam time).
+    
+\end{itemize}    
+
+Likewise, each \emph{change} may affect one or more types of \emph{threats to validity} \cite{wohlin:experimentation}:
+
+\begin{itemize}
+    \item \emph{Conclusion validity}. Related to obtaining correct conclusions about the relationship between the \emph{treatment} and the \emph{result} of an experiment.
+    
+    \item \emph{Internal validity}. Assures that the result is caused by the \emph{treatment} and is not a consequence of other factors.
+     
+    \item \emph{Construct validity}. Assures that the treatment reflects the \emph{construct} of the \emph{cause} and  that the \emph{outcome} reflects the \emph{construct} of the effect.
+    
+    \item \emph{External validity}. Related to the generalization of the results outside the scope of the study.
+\end{itemize}
+
+Once the information about the replications and their changes has been conceptualized, a meta--model is proposed for its representation.
+Fig.~\ref{fig:Metamodelo-UML} depicts the current version of meta--model using UML class diagram notation.
+
+%-----------------------
+\begin{figure*}[h]
+    %\centering
+    \includegraphics[width=\textwidth]{Metamodelo}
+    \caption{Meta-model of replications and changes}
+    \label{fig:Metamodelo-UML} 
+\end{figure*}
+%-----------------------

@@ -1,0 +1,155 @@
+% ---------------------------------------------------
+% File    : cruz_computing_2020_02_review.tex
+% Content : Review of replication publications (ESEM y EMSE) section of the article for Computing
+% Date    : 20/7/2019
+% Authors : M.Cruz
+% ---------------------------------------------------
+% ------------------------------
+% Last update: 31/03/2020 (MCruz)
+% Actualización a partir de la tesis
+% ------------------------------
+
+\section{Review of replication publications }
+\label{sec:SLR}
+
+Before presenting our proposal, a review have been conducted to find out how changes in replications are being reported and to identify the different proposals.
+
+The primary studies have been identified in an earlier systematic review about replications  \cite{cruz2019replication} including studies published between 2013 and 2018 that report at least one replication of an empirical study.
+
+The automatic search was conducted querying the \SCOPUS repository. %
+After several iterations analysing retrieved studies and adjusting query terms, the final query string was the following:
+
+\begin{quote}
+"software engineering" \\ and  title-abs-key( "experiment*"  or \\  "case stud*" or "observational stud*" or "pilot stud*" or "survey" ) \\ and title-abs-key( 
+"repli*" or "family of*" ) \\ and  
+ pubyear \textgreater  \space 2012 and pubyear \textless  \space 2019
+
+\end{quote}
+
+In order to be able to analyse the studies in detail,we have selected only the studies published in two of the main forums in the area \gls{ESE} area: \emph{the Empirical Software Engineering Journal (EMSE)} and \emph{the International Conference on Empirical Software Engineering and Measurement (ESEM)}.\\
+
+\tablename~\ref{tab:T-SLR} summarizes the aspects analysed:
+\input{figures/T-SLR-Ordenado.tex}
+
+\begin{itemize}
+	\item \emph{Empirical method}. Of the 25 studies selected, 19 have used the empirical method \gls{EX}, 2 \gls{QE}, 2 \gls{SV} and 2 are \gls{CS}. \\
+	
+	\item \emph{Guidelines followed}. 11 studies (44\%) followed Carver's guidelines \cite{carver2010towards}, 4 followed Wohlin et al. 
+	\cite{wohlin:experimentation}, 2 followed Jedlitschka et al. \cite{jedlitschka2008reporting}, 1 followed Juristo and Moreno \cite{juristo2013basics} and the case study followed Runeson and H{\"o}st \cite{runeson2009guidelines}. One of the studies claims to have followed the 4 guidelines.
+	
+	The only specific guidelines for reporting replications are Carver's. The rest are used in an adapted way.\\
+	Section \ref{sec:CS-Results} compares the guidelines identified in this review with our proposed template. \\
+
+	\item \emph{Type}. The type of replication is internal or external. There are the same number of studies reporting internal and external replications. One of the studies \cite{runeson2014variation} includes both external and internal replications. 
+	If the original study is reported, it appears O. 28\% of studies (7 studies) report the original along with some of its replications.
+	
+	The studies can be grouped in a similar way to \cite{da2014replication} and the following groups can be distinguished:
+	\begin{itemize}
+        \item \textbf{I}: Studies that report only \emph{internal} replications (7 studies).
+    
+        \item \textbf{O-I}: Studies that report \emph{internal} replications along with the original experiment (5 studies).
+    
+        \item \textbf{E}: Studies that report only \emph{external} replications (10 studies).
+    
+        \item \textbf{O-E}: Studies that report \emph{external} replications along with the original experiment (2 studies).
+    
+        \item \textbf{IE}: Studies that report \emph{external} and \emph{internal} replications (1 study).
+    	\\
+    \end{itemize}	
+    
+	
+	
+	\item \emph{Number of replications}. Indicates the number of replications reported in the study. 12 studies (48\%)  include only one replication (external or internal) and reference is made to the original already published.
+	\\
+   \item \emph{Number of changes}. Indicates the number of changes described in the study.
+   \begin{itemize}
+        \item 6 studies, including the 2 surveys, do not describe changes to the original experiment (--). This may be because: i) there is no change, only the participants involved change (e.g. \cite{fernandez2016does}); and ii) the changes do not appear in the replication report 	(e.g. \cite{santos2019comparing}.
+   
+    \item All internal replications describe changes and only 6 of the 12 external replication studies describe changes. The study that reports internal and external replications is not taken into account.
+    
+     \item In 2 of the studies \cite{de2017influence,fucci2016external}, the dimensions identified in \cite{gomez2014understanding} are associated with the changes. In our template proposal we use these \emph{dimensions} and associated \emph{elements}.
+ 
+     \item 9 of the 11 studies that follow Carver's guidelines describe the changes. The other 2 studies, which do not specify changes but follow Carver's guidelines, are a survey (\cite{nielebock2019commenting}) and a experiment that follows 4 guidelines (\cite{fernandez2016does}).
+    \\
+    \end{itemize}
+
+   
+     \item \emph{Use of tables}. Indicate if changes are specified with the aid of tables. If so, it is denoted with Yes.
+   
+    \begin{itemize}
+        \item There are two studies \cite{reimanis2014replication,assar2016using} that only explain the changes using tables. In the rest, they are also described in natural language with the problem of language ambiguity.
+   
+        \item 10 studies use tables to describe changes. These tables present a common structure. The changed property is defined in the rows. There is a column for the original and for each replication. The reason for carrying out the change is not included in the tables.
+    
+        \item The structure of the table presented in \cite{de2017influence} is different from the previous ones. The change is described by analysing the dimensions identified in \cite{gomez2014understanding}.
+        \\
+       
+        
+    \end{itemize}      
+        
+        \item \emph{Change motivation }. Indicates if the motivation for each change is specified. If so, it is denoted with Yes.
+        
+        \begin{itemize}
+            \item Motivation is described in 7 of the 19 studies that present changes.
+        
+            \item In studies that report several replications, it is often explained what is different between the replications but it is not compared with the original nor is the change justified (e.g. \cite{santos2019comparing}). \\
+        \end{itemize}
+    
+    \item \emph{Validity threats}. Indicates whether the study analyses threats to validity. Generally studies analyse the \emph{external, internal, construct} and \emph{conclusion validity}. Only one study does not analyse \emph{validity threats}.\\
+    
+    \item \emph{Threats change}. Finally, we examine whether the threats are related to the changes.
+    It is denoted with Yes when any of the changes is justified as a way of mitigating some type of \emph{threat} (e.g. \cite{kosar2018program}) or analyze how the change affects the validity threats (e.g. \cite{albayrak2014investigation}).
+    In 6 of the studies, validity threats are related to the changes carried out.
+    
+\end{itemize} 
+
+%Carver's guidelines are more used when replications are internal (5 of 7) than in the case of external replications (5 of 10). 
+%In 10 of the 11 studies that follow Carver's guidelines, the original study is not included because it has already been published.
+%In 8 of the 11 studies that follow Carver's guidelines, a single replication is reported.
+   
+
+
+ 
+%----------------------------
+\subsection{Findings} 
+\label{sec:SLR-Findings}
+%----------------------------
+    
+In order to know how the changes are reported, we have mainly analyzed: \emph{i)} whether the changes are described in natural language or through tables and \emph{ii)} in each case, the information involved:
+
+\begin{itemize}
+    %----------------
+    
+    \item \emph{Most studies} (19 out of 25, 76\%) \emph{specify their changes} either textually or with the help of tables.
+    
+    \item \emph{Only 7 of these 19 studies present the motivation for change} (37\%). Sometimes motivation is not reported (e.g. \cite{gomez2014replicated,kosar2018program}).
+    
+    \item \emph{Most of the changes are described in textual form}.  For each change, the situation in the original, in the replication and the motivation for carrying out the change are described in natural language with the problem of natural language ambiguity (e.g. \cite{albayrak2014investigation}). 
+    
+   
+   
+    \item \emph{There are studies that describe the changes using tables}. Tables facilitate the description of the changes. Rows correspond to the changes, showing the name of the affected variable or, in general, the changed property. Columns indicate the value in the original and in its replications (e.g. \cite{riaz2017identifying}.
+    
+%    \item \emph{A section to describe the changes is frequent} although \emph{there are studies that describe the changes in several sections}. In this case, changes are specified as the replication is described (e.g.\cite{runeson2014variation}). 
+    
+ \end{itemize}   
+ 
+In relation to the type of replication and the use of guidelines, findings are:
+ 
+ \begin{itemize}
+    \item \emph{Changes are specified more frequently in internal than in external replications.} 
+    Changes are described in 100\% of studies with internal replications and only 50\% of studies with external replications. 
+    
+    In external replications is more difficult to specify the changes because there is a lack of knowledge of the original experiment,as the experimenters are different and the laboratory package is usually not made public \cite{santos2018analyzing}.
+    
+    However, knowing the changes in external replications is just as necessary as knowing the changes in internal replications because it helps to understand the original experiment and how it has evolved over time.
+    
+    \item \emph{Carver's guidelines are followed} mainly when the type of replication is internal, the original is not reported and especially to report a single replication.
+    
+    \item In the sistematic review carried out by Da Silva \etal \cite{da2014replication}, it was found that 74\% were internal replications and of these 64\% were reported along with the original which led to think that the aim of the replication was to confirm that the results observed in the original experiment are not the result of chance \cite{carver2014replications}.
+    
+    In our case, 50\% are internal replications and of these only 42\% are reported along with the original which represents \emph{an evolution to publishing the replications independently} which may be due to the growing interest in the practice of replication itself and giving the replication and its publication the relevance it deserves.
+     
+
+\end{itemize}
+
